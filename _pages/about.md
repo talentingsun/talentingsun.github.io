@@ -37,3 +37,26 @@ we introduce an innovative algorithm that synergizes Graph Convolutional Neural 
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TIM</div><img src='images/mul.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Multi-label Concrete Bridge Damage Classification Using Graph Convolution] \\
+Jianxi Yang, **Hao Li**, Le Zhang, Lu Zhao, Shixin Jiang, Hong Xie
+
+[**Project**]([https://speechresearch.github.io/fastspeech/](https://github.com/talentingsun/Multi-label_Concrete_Bridge_Damage)) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
+
+we introduce an innovative algorithm that synergizes Graph Convolutional Neural Network (GCN) and MaxViT (Multi-Axis Vision Trans- former). Our approach leverages MaxViT to extract image features and subsequently models the co-occurrence correla- tion of labels. Additionally, we employ a graph convolutional neural network to extract features that capture the correlation between labels. Ultimately, we integrate these image features to enable the multi-label classification of damage images.
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TIM</div><img src='images/mul.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Multi-label Concrete Bridge Damage Classification Using Graph Convolution] \\
+Jianxi Yang, **Hao Li**, Le Zhang, Lu Zhao, Shixin Jiang, Hong Xie
+
+[**Project**]([https://speechresearch.github.io/fastspeech/](https://github.com/talentingsun/Multi-label_Concrete_Bridge_Damage)) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
+
+we introduce an innovative algorithm that synergizes Graph Convolutional Neural Network (GCN) and MaxViT (Multi-Axis Vision Trans- former). Our approach leverages MaxViT to extract image features and subsequently models the co-occurrence correla- tion of labels. Additionally, we employ a graph convolutional neural network to extract features that capture the correlation between labels. Ultimately, we integrate these image features to enable the multi-label classification of damage images.
+</div>
+</div>
