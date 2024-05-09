@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CBDOD7K</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">CBDOD7K: A new benchmark dataset for Concrete Bridge Damage Object
+              Detection</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="">author1</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="">author1</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="">author3</a><sup>2</sup>,
+              </span>
+              <!-- <span class="author-block">
+              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+            </span> -->
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Chongqing Jiaotong University,</span>
+              <span class="author-block"><sup>2</sup>University of Electronic Science and Technology of China</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href=""
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/General Scenarios.jpg" alt="">
+
+        <h2 class="content has-text-centered">
+          The complexity of the imaging environment for bridge surface inspection leads to small differences in the
+          background of damage imaging, low contrast, and the presence of a large amount of noise. Concrete bridge
+          damages have the characteristics of dense distribution, large multi-scale variation, large proportion of small
+          object, and large aspect ratio span. Damage objects have the problem of being obscured by other objects.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Concrete bridge detection (CBD) has gained significant attention for its effectiveness in deep learning
+              approaches. Nevertheless, when compared to generic scene inspection data and industrial defect detection
+              data, the imaging environment complexity during bridge surface inspection introduces subtle variations in
+              the background of disease imaging, low contrast, and significant noise. Additionally, the lack of a
+              comprehensive openly labeled dataset for large-scale concrete bridge damage inspection further complicates
+              research efforts in concrete bridge damage detection. To address this issue, this paper introduces a novel
+              dataset called CBDOD7K. It comprises 7,354 real bridge inspection images captured in various concrete
+              bridge inspection scenarios, encompassing six prevalent categories of concrete bridge damages.
+              Furthermore, the dataset offers standardized box-level annotations. CBDOD7K represents a pioneering
+              large-scale dataset in the realm of deep learning-based research on concrete bridge disease inspection,
+              signifying a substantial advancement in terms of diversity, complexity, and scalability. secondly, this
+              paper presents a robust yet straightforward baseline method called BL-CBDOD for CBDOD7K. BL-CBDOD adopts a
+              two-stage architecture for object detection, utilizing a composite backbone network to extract image
+              features. Subsequently, an enhanced Region Proposal Network (RPN) and confidence calibration approach are
+              employed for accurate prediction and classification of target boxes. Finally, we conducted a benchmarking
+              study of these methods against established advanced object detection networks using CBDOD7K. The results
+              demonstrate that our BL-CBDOD achieves outstanding performance on the test set. Lastly, we discuss the
+              challenges and potential research directions of CBDOD7K to lay the foundation for further research in this
+              field.
+            </p>
+
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+
+
+      <!-- <section class="section">
+        <div class="container is-max-desktop">
+          <section class="section"> -->
+      <!-- Results. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+          <h2 class="title is-3"><img id="painting_icon" width="3%"
+              src="https://cdn-icons-png.flaticon.com/512/3515/3515174.png"> Data Collection and Annotation
+          </h2>
+        </div>
+
+      </div>
+      <!-- </div> -->
+      <!--/ Results. -->
+      <div class="container is-max-desktop">
+        <!-- Grounedtext2img. -->
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-4"> <img id="painting_icon" width="3%"
+                src="https://scienceqa.github.io/img/logo.png"><span style="font-size: 100%;">Data Collection
+            </h2>
+            <div data-plotly="lichunyuan24/1" style="text-align: center; position: relative;">
+              <div class="columns is-centered">
+                <div class="column is-full-width">
+                  <div class="content has-text-justified">
+                    <a href="https://plotly.com/~lichunyuan24/1/?share_key=v4opE3TJpxqQ08RYsDD4iv" target="_blank"
+                      title="Plot 1" style="display: block; text-align: center;" data-plotly="lichunyuan24/1"><img
+                        id="painting_icon" width="100%" src="static/images/Example of damage categories.jpg"
+                        data-plotly="lichunyuan24/1"></a>
+                    <p>
+                      <b>Data Collection:</b> The data used in this study were collected from different bridge
+                      inspection agencies under real-world conditions. The total number of raw data exceeded 100,000,
+                      mainly consisting of images captured during the necessary inspection steps in the bridge
+                      inspection process.
+                    </p>
+                    <p>
+                      <b>Data Filtering:</b> To mitigate the impact of individual supervisors, this study employs three
+                      bridge inspection experts with extensive experience to collectively screen the damage images from
+                      the vast pool of bridge inspection images.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <!-- <p style="font-family:Times New Roman"><b>LLaVA alones achieve 90.92%. We use the text-only GPT-4 as the judge, to predict the final answer based on its own previous answers and the LLaVA answers. This "GPT-4 as judge" scheme yields a new SOTA 92.53%.</b> -->
+
+          </div>
+        </div>
+
+      </div>
+      <div class="container is-max-desktop">
+        <!-- Grounedtext2img. -->
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-4"> <img id="painting_icon" width="3%"
+                src="https://scienceqa.github.io/img/logo.png"><span style="font-size: 100%;">Data Annotation
+            </h2>
+            <div data-plotly="lichunyuan24/1" style="text-align: center; position: relative;">
+              <div class="columns is-centered">
+                <div class="column is-full-width">
+                  <div class="content has-text-justified">
+                    <a href="https://plotly.com/~lichunyuan24/1/?share_key=v4opE3TJpxqQ08RYsDD4iv" target="_blank"
+                      title="Plot 1" style="display: block; text-align: center;" data-plotly="lichunyuan24/1"><img
+                        id="painting_icon" width="100%" src="static/images/data.jpg" data-plotly="lichunyuan24/1"></a>
+                    <p>
+                      <b>Data Annotation Process:</b> In this paper, an expert with a solid background in machine vision
+                      and extensive research experience in damage recognition is responsible for the screening process.
+                      The identified damage images are then collected into a library of sample images. These sample
+                      images are then distributed to three damage annotators for manual annotation. The annotators then
+                      submit the annotated images to the damage recognition expert, who reviews and reassigns any
+                      incorrectly annotated images to another annotator for further annotation. This iterative
+                      annotation process guarantees the completion of dataset annotation as proposed in this paper.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <!-- <p style="font-family:Times New Roman"><b>LLaVA alones achieve 90.92%. We use the text-only GPT-4 as the judge, to predict the final answer based on its own previous answers and the LLaVA answers. This "GPT-4 as judge" scheme yields a new SOTA 92.53%.</b> -->
+
+          </div>
+        </div>
+
+      </div>
+      <div class="container is-max-desktop">
+        <!-- Grounedtext2img. -->
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-4"> <img id="painting_icon" width="3%"
+                src="https://scienceqa.github.io/img/logo.png"><span style="font-size: 100%;">Example of
+                Annotation
+            </h2>
+            <div data-plotly="lichunyuan24/1" style="text-align: center; position: relative;">
+              <div class="columns is-centered">
+                <div class="column is-full-width">
+                  <div class="content has-text-justified">
+                    <a href="https://plotly.com/~lichunyuan24/1/?share_key=v4opE3TJpxqQ08RYsDD4iv" target="_blank"
+                      title="Plot 1" style="display: block; text-align: center;" data-plotly="lichunyuan24/1"><img
+                        id="painting_icon" width="70%" src="static/images/Example of annotation.jpg"
+                        data-plotly="lichunyuan24/1"></a>
+                    <p>
+                      In this study, a total of 7,354 damage images belonging to six categories were annotated using the
+                      bounding box approach. The annotation format employed in this research was adapted from the VOC
+                      format. To facilitate organization and identification, each file was numerically named from 1 to
+                      7,354.
+                      The original image files were in JPG format, with corresponding XML label files.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <!-- <p style="font-family:Times New Roman"><b>LLaVA alones achieve 90.92%. We use the text-only GPT-4 as the judge, to predict the final answer based on its own previous answers and the LLaVA answers. This "GPT-4 as judge" scheme yields a new SOTA 92.53%.</b> -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- </section> -->
+
+
+
+    <!-- <section class="section">
+        <div class="container is-max-desktop"> -->
+    <!-- <section class="section"> -->
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3"><img id="painting_icon" width="3%"
+            src="https://cdn-icons-png.flaticon.com/512/3515/3515174.png"> Data Description
+        </h2>
+      </div>
+
+    </div>
+    <!-- </div> -->
+    <!--/ Results. -->
+    <div class="container is-max-desktop">
+      <!-- Grounedtext2img. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-4"> <img id="painting_icon" width="3%"
+              src="https://scienceqa.github.io/img/logo.png"><span style="font-size: 100%;">Data Statistics
+          </h2>
+          <div data-plotly="lichunyuan24/1" style="text-align: center; position: relative;">
+            <div class="columns is-centered">
+              <div class="column is-full-width">
+                <div class="content has-text-justified">
+                  <a href="https://plotly.com/~lichunyuan24/1/?share_key=v4opE3TJpxqQ08RYsDD4iv" target="_blank"
+                    title="Plot 1" style="display: block; text-align: center;" data-plotly="lichunyuan24/1"><img
+                      id="painting_icon" width="100%" src="static/images/Data Statistics.jpg"
+                      data-plotly="lichunyuan24/1"></a>
+                  <p>
+                    Our dataset is publicly available and designed specifically for object detection
+                    algorithms. We partitioned the dataset into a training set and a
+                    test set, consisting of 7,354 damage images. Among these, 7,054 images are allocated to the training
+                    set, while 354 images form the test set. Fig illustrates the distribution of images
+                    across different damage categories, indicating that most categories have over 2,000 images, except
+                    for the hole and speckle categories. Additionally, Fig displays the number of bounding
+                    boxes per category, revealing that rebar, corrosion, and spall are the most prominent categories,
+                    while crack, hole, and speckle have fewer instances.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- <p style="font-family:Times New Roman"><b>LLaVA alones achieve 90.92%. We use the text-only GPT-4 as the judge, to predict the final answer based on its own previous answers and the LLaVA answers. This "GPT-4 as judge" scheme yields a new SOTA 92.53%.</b> -->
+
+        </div>
+      </div>
+
+    </div>
+    <div class="container is-max-desktop">
+      <!-- Grounedtext2img. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-4"> <img id="painting_icon" width="3%"
+              src="https://scienceqa.github.io/img/logo.png"><span style="font-size: 100%;">Comparison with Other
+              Relevant Open Data
+          </h2>
+          <div data-plotly="lichunyuan24/1" style="text-align: center; position: relative;">
+            <div class="columns is-centered">
+              <div class="column is-full-width">
+                <div class="content has-text-justified">
+                  <a href="https://plotly.com/~lichunyuan24/1/?share_key=v4opE3TJpxqQ08RYsDD4iv" target="_blank"
+                    title="Plot 1" style="display: block; text-align: center;" data-plotly="lichunyuan24/1"><img
+                      id="painting_icon" width="70%" src="static/images/comparison.jpg"
+                      data-plotly="lichunyuan24/1"></a>
+                  <p>
+                    To compare our concrete bridge damages detection dataset with others in the same domain, we evaluate
+                    three publicly available datasets: Aerial Robot, COCO-Bridge
+                    , and CODEBRIM , as presented in Fig.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- <p style="font-family:Times New Roman"><b>LLaVA alones achieve 90.92%. We use the text-only GPT-4 as the judge, to predict the final answer based on its own previous answers and the LLaVA answers. This "GPT-4 as judge" scheme yields a new SOTA 92.53%.</b> -->
+
+        </div>
+      </div>
+
+    </div>
+    
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>The article is under review</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <!-- <div class="content has-text-centered">
+        <a class="icon-link"
+           href="./static/videos/nerfies_paper.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div> -->
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              Website source code based on the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
